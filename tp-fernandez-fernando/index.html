@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorador de Personajes · Rick y Morty</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="encabezado-contenido">
+            <h1>Explorador Multiversal: Rick &amp; Morty</h1>
+            <span class="subtitulo">Variante A · Buscador de Personajes</span>
+        </div>
+    </header>
+
+    <main class="principal">
+        <section class="panel-busqueda" aria-labelledby="titulo-buscador">
+            <h2 id="titulo-buscador" class="oculto">Buscador de Personajes</h2>
+            <form id="form-busqueda" class="formulario-busqueda" novalidate>
+                <div class="campo-grupo">
+                    <label for="input-nombre">Nombre del personaje</label>
+                    <input
+                        type="text"
+                        id="input-nombre"
+                        name="nombre"
+                        placeholder="Ej. Rick, Morty, Summer..."
+                        autocomplete="off"
+                    >
+                </div>
+
+                <div class="campo-grupo">
+                    <label for="select-estado">Estado vital</label>
+                    <select id="select-estado" name="estado">
+                        <option value="">Todos</option>
+                        <option value="alive">Vivo</option>
+                        <option value="dead">Muerto</option>
+                        <option value="unknown">Desconocido</option>
+                    </select>
+                </div>
+
+                <div class="campo-acciones">
+                    <button type="submit" id="btn-buscar" class="btn-primario">Buscar</button>
+                    <button type="button" id="btn-limpiar" class="btn-secundario">Limpiar</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="seccion-estado" aria-live="polite">
+            <p id="mensaje-estado" class="mensaje-estado oculto"></p>
+        </section>
+
+        <section class="seccion-resultados" aria-label="Resultados de personajes">
+            <div id="grilla-personajes" class="grilla-tarjetas"></div>
+        </section>
+    </main>
+
+    <footer class="pie-pagina">
+        <p>Desarrollado por <strong>Fernando Fernández</strong> · Trabajo Práctico · Fundamentos de Desarrollo Web</p>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
